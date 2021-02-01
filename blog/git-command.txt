@@ -21,5 +21,26 @@ git push -u origin <name_branch>
 ----Working code----
 
 git checkout -b <new_name_branch>
+#for example
+git checkout -b test
+
+git add .
+git commit -m "text"
+
+git push -u origin test
+# next create pull-request in git-repo
+# check my-pull-request
+# merge code branc test with base-repo
+
+git chekout main
+
+git pull
+
+# if not deleting old branch (test)
+
+git branch -d test
+
+
+git status
 
 
