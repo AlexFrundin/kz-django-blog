@@ -1,0 +1,25 @@
+git init
+
+touch .gitignore
+edit file .gitignore
+
+git add . #add all item in current directory
+
+git rm --cached <name_file>
+git rm --cached -r <name_directory>
+git rm --cached -r . #remove all files into cached
+
+git commit -m "Text of my commits"
+
+git branch -M <name_branch>
+git branch -M main
+
+git remote add origin <your_url_repo_git>
+
+git push -u origin <name_branch>
+
+----Working code----
+
+git checkout -b <new_name_branch>
+
+
