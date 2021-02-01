@@ -1,7 +1,9 @@
 git init
-
 touch .gitignore
-edit file .gitignore
+#edit file .gitignore
+#or 
+git clone <_url_repo_git>
+
 
 git add . #add all item in current directory
 
