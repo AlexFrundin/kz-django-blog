@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block stitle %}Actor{% endblock stitle %}
+
+{% block navbar %}{{block.super}}{% endblock navbar %}
+
+{% block content %}
+
+{% for image in actor.images.all  %}
+    <img src="{{image.image.url}}" alt="{{image.alt_extra}}">
+{% endfor %}
+
+full name: {{actor.first_name}} {{actor.second_name}}
+birth: {{actor.birth}}
+
+
+{% if actor.movies.all %}
+    {% for movie in actor.movies.all %}
+		<p>
+			<a href="{% url 'movie_get' pk=movie.id %}">{{movie.title}}</a>
+		</p>
+    {% endfor %}
+{% endif %}
+
+
+{% endblock content %}

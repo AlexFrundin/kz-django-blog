@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block stitle %}Index{% endblock stitle %}
+{% block navbar %}{{block.super}}{% endblock navbar %}
+
+{% block content %}
+{{name}}
+<div class="container mt-5">
+	<div class="row justify-content-center align-items-center">
+			<h5>Привет, мой друг!<br>Давай знакомится!</h5>
+	</div>
+
+	<div class="row justify-content-center align-items-center">
+		<form action="" class="form form-group">
+			<label for="idname" value="Ваше имя:"></label>
+			<input id='idname' name='name' type="text" class="form-control">
+			<button class="btn btn-primary" type="submit">ОК</button>
+		</form>
+	</div>
+</div>
+
+{% endblock content %}

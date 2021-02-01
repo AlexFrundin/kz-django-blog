@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block stitle %}Register{% endblock stitle %}
+
+{% block content %}
+
+<div class="container mt-5">
+	<div class="row justify-content-center align-items-center">
+			<h5>{{ name|capfirst }}</h5>
+	</div>
+
+	<div class="row justify-content-center align-items-center">
+		<form method="POST" class="form form-group">
+			{% csrf_token %}
+			<label for="idname">Логин:</label>
+			<input id='idname' name='login' type="text" class="form-control">
+			<label for="idpasw">Введите пароль</label>
+			<input type="password" name="password" id="idpasw" class="form-control">
+			<label for="idrepasw">Повторите пароль</label>
+			<input type="password" name="password2" id="idrepasw" class="form-control">
+			<button class="btn btn-primary" type="submit">Если уверен, жми</button>
+		</form>
+	</div>
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block stitle %}Фильмы{% endblock stitle %}
+{% block navbar %}{{block.super}}{% endblock navbar %}
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		{% for movie in movies %}
+		<div class="col-3">
+			<div class="card mb-3 mt-3 row">
+				<div class="card-body">
+					<h5>​​{{movie.title}}</h5>
+					<p class="card-text">{{movie.year}}​​</p>
+					<a href="{{movie.get_absolute_url}}">Подробнее</a>
+				</div>
+				<div class="">
+					{{movie.preview}}
+				</div>
+			</div>
+		</div>
+		{% endfor %}​​
+	</div>
+</div>
+
+<div>
+	{% if user.is_authenticated %}
+		<a href="{% url 'movie_create' %}">Добавить фильм!</a>
+	{% endif %}
+</div>
+
+{% endblock content %}

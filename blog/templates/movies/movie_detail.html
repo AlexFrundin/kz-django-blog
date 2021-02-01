@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block stitle %}О фильме{% endblock stitle %}
+{% block navbar %}{{block.super}}{% endblock navbar %}
+
+{% block content %}
+
+<p>title: {{movie.title}}</p>
+<p>year: {{movie.year}}</p>
+
+{% for actor in movie.actors.all  %}
+    {% if actor %}
+		<p>
+			<a href="{{actor.get_absolute_url}}">{{actor.first_name}} {{actor.second_name}}</a>
+		</p>
+    {% endif %}
+
+{% endfor %}
+
+{% if user.is_authenticated %}
+  <a href="{% url 'movie_delete' pk=movie.id %}">Удалить фильм</a>
+  <a href="{% url 'movie_update' pk=movie.id %}"> Внести изменения</a>
+{% endif %}
+
+{% endblock content %}

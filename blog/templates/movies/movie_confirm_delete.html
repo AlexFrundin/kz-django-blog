@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block stitle %}DELETE{% endblock stitle %}
+{% block navbar %}{{block.super}}{% endblock navbar %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    <p> Это действия убъет не только {{ object.title }}, но и все упоминания о нем?</p>
+    <input type="submit" value="Уверен!">
+</form>
+
+{% endblock content %}

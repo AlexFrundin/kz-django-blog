@@ -1,0 +1,38 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+appdirs = ">=1.4.4"
+backcall = ">=0.2.0"
+colorama = ">=0.4.3"
+decorator = ">=4.4.2"
+distlib = ">=0.3.1"
+filelock = ">=3.0.12"
+ipython = ">=7.16.1"
+jedi = ">=0.17.1"
+parso = ">=0.7.0"
+pbr = ">=5.4.5"
+pickleshare = ">=0.7.5"
+prompt-toolkit = ">=3.0.5"
+six = ">=1.15.0"
+stevedore = ">=2.0.1"
+traitlets = ">=4.3.3"
+virtualenv = ">=20.0.26"
+virtualenv-clone = ">=0.5.4"
+virtualenvwrapper = ">=4.8.4"
+virtualenvwrapper-win = ">=1.2.6"
+wcwidth = ">=0.2.5"
+ipython_genutils = ">=0.2.0"
+PLTable = ">=1.0.1"
+Pygments = ">=2.6.1"
+django = "*"
+django-extensions = "*"
+pillow = "*"
+django-bootstrap4 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
